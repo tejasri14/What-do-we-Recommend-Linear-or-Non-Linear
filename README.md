@@ -43,4 +43,4 @@ To assess the performance of the methods with varying embedding size, we use the
 For the second part of the experiments, we gradually varied the number of users as inputs to both MF and NCF models. We calculated the test RMSE [10] for both the models and plotted the graph that shows the difference in test RMSE for varying input data.
 
 ## Results 
-![alt text] (https://github.com/tejasri14/What-do-we-Recommend-Linear-or-Non-Linear/blob/main/images/RMSE%20vs.%20no.%20of%20users.png)
+![plot] (https://github.com/tejasri14/What-do-we-Recommend-Linear-or-Non-Linear/blob/main/images/RMSE%20vs.%20no.%20of%20users.png)
