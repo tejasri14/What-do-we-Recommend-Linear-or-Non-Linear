@@ -6,11 +6,11 @@ In this work, we compare the performance of the linear and non-linear recommenda
 
 In this section we see how SVD is used as a collaborative filtering approach in recommender systems. SVD breaks down the Rating Matrix R, which maps the ratings given by each user for the movies in different columns, into three matrices P, Σ , and Q.. In the rest of the paper, we assume P is the user embedding and Q is the item embedding.
 
-R = P ΣQT (1)
+R = P ΣQT
 
 The P matrix represents the relationship between users and latent factors, Σ is a diagonal matrix that represents the strength of each latent factor and Q matrix represents the similarity between the movies and the latent factors. The latent factors here represent certain characteristics of the movies, for example genre, actors in the movie, length of the movie and so on. The SVD algorithm decreases the dimension of the rating matrix R by mapping the users and movies into a k- dimensional subspace. The diagonal matrix Σ is reduced to Σ by retaining the k largest singular values. The matrices P and Q are also reduced to Pk and Qk to estimate the rating matrix Rk as,
 
-Rk=PkΣkQTk (2)
+Rk = PkΣkQTk
 
 We then find the square root of the reduced diagonal matrix and multiply that with the reduced user and movie matrix to obtain the latent space for the users and the movies respectively. The rating prediction is then done by multiplying the latent space of the user with that of the movie.
 the probability that a user u belong to a certain group of users represented by l who like the same set of movies and the probability that the set of users in the group l like the movie i. And each probability vector Pu is updated according to the rating of the respective users. Similarly the item vector Qi is also updated according to the ratings given for that particular item. 
@@ -21,7 +21,7 @@ One limitation of the SVD method is that it requires all the undefined NaN value
 
  The rating prediction for a user u on an item i is then modelled as the product of a row in the user feature matrix pu with the row of the item feature matrix qi as,
  
-rˆu,i =qiTpu
+rˆu,i = qiTpu
 
 These latent vectors pu and qi are learnt by minimizing the cost function which is computed by the summation squared error terms for the known set of ratings and the regularizing term.
 
@@ -43,4 +43,10 @@ To assess the performance of the methods with varying embedding size, we use the
 For the second part of the experiments, we gradually varied the number of users as inputs to both MF and NCF models. We calculated the test RMSE [10] for both the models and plotted the graph that shows the difference in test RMSE for varying input data.
 
 ## Results 
-![plot] (https://github.com/tejasri14/What-do-we-Recommend-Linear-or-Non-Linear/blob/main/images/RMSE%20vs.%20no.%20of%20users.png)
+![plot](./images/RMSE%20vs.%20no.%20of%20users.png)
+
+![plot](./images/RMSE%20vs.%20users%20for%20varying%20embedding%20dimensions.png)
+
+![plot](./images/RMSE%20vs.%20varying%20embedding%20dimensions.png)
+
+![plot](./images/Trainable%20Prameters%20vs.%20Embedding%20Dimensions.png)
